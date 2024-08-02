@@ -5,7 +5,7 @@ Currently the React-19 is in RC ( Release Candidate ) version and this repo is c
 
 ## Table Of Content
 
-1. useTransition hook
+1. [useTransition hook](#usetransition-hook)
 2. Actions ( In general )
 3. UseOptimistic hook
 4. UseActionState hook
@@ -23,3 +23,25 @@ Currently the React-19 is in RC ( Release Candidate ) version and this repo is c
 16. Support for document metadata
 17. Enhanced stylesheet management
 18. React 19’s new APIs for resource optimization
+
+---
+
+### useTransition hook
+
+React, till 18th version had no any proper hook to handle the async changes. But in R19, useTransaction hook enables developers to handle this condition directly ( instead of creating separate hook or handling in a different function ) by giving a boolean `loading` flag.
+
+```
+  const [isPending, startTransition] = useTransition();
+  const [users, setUsers] = useState([]);
+
+  const getUsersData = () => {
+    startTransition(async () => {
+        try{
+            const data = await getUsers();
+            setUsers(data);
+        } catch (e) {
+            // custom error handling | console.log(e)
+        }
+    })
+  };
+```
