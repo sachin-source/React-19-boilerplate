@@ -6,7 +6,7 @@ Currently the React-19 is in RC ( Release Candidate ) version and this repo is c
 ## Table Of Content
 
 1. [useTransition hook](#usetransition-hook)
-2. Actions ( In general )
+2. Server Actions
 3. UseOptimistic hook
 4. UseActionState hook
 5. Form Actions
@@ -28,7 +28,9 @@ Currently the React-19 is in RC ( Release Candidate ) version and this repo is c
 
 ### useTransition hook
 
-React, till 18th version had no any proper hook to handle the async changes. But in R19, useTransaction hook enables developers to handle this condition directly ( instead of creating separate hook or handling in a different function ) by giving a boolean `loading` flag.
+React, till 18th version had no any proper hook to handle the async changes. But in R19, useTransaction hook enables developers to handle this condition directly ( instead of creating separate hook or handling in a different function ) by giving a boolean `loading` flag.  
+
+#### Sample Snippet
 
 ```
   const [isPending, startTransition] = useTransition();
@@ -44,4 +46,22 @@ React, till 18th version had no any proper hook to handle the async changes. But
         }
     })
   };
+```
+
+---
+
+### Server Actions
+
+Functions ( or Actions ) with labelled as `"use server"` are treated as server actions.
+
+Unlike other general functions ( actions ), server actions are the special kind of functions which are executed at the server side.
+This ensures quality time and reduces most of the unnecessary stuffs with regular development.
+
+#### Sample Snippet
+
+```
+async fuction getLikes () {
+    "use server"
+    ...
+}
 ```
