@@ -67,3 +67,20 @@ async fuction getLikes () {
     ...
 }
 ```
+
+### UseOptimistic Hook
+
+The traditional React, in general, updates the DOM after once the server response. When in case of slow response cases, we used to have `loading` based approach to change a particular state and get acknowledgement from the server. ( for Ex: like, comment or send request etc )  
+
+But R19 enables us to change the state and update the DOM even before the server response and so, improves the user experience.  
+This phenomena of optimistically updating the DOM is achieved with the `useOptimistic` hook ( Client Api ) which takes initial state and the update function as arguments and executes optimistically.
+
+#### Sample Snippet
+
+```
+
+import { useOptimistic } from 'react'
+
+const optimistic = useOptimistic(initialState, updateFunction);
+
+```
