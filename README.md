@@ -7,7 +7,7 @@ Currently the React-19 is in RC ( Release Candidate ) version and this repo is c
 
 1. [Async useTransition hook](#async-usetransition-hook)
 2. [Server Actions](#server-actions)
-3. UseOptimistic hook
+3. [UseOptimistic hook](#useOptimistic-hook)
 4. UseActionState hook
 5. Form Actions
 6. UseFormStatus hook
