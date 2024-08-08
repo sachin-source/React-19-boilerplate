@@ -87,9 +87,10 @@ const optimistic = useOptimistic(initialState, updateFunction);
 
 ### useActionState hook
 
-This is little tricky hook; It takes 2 arguments : a **formAction** and an **initialState**. And returns a **state** as well as an action function.  
+This is little tricky hook which takes 2 arguments : a **formAction** and an **initialState**. And returns a **state** as well as an **action** function.  
 
 The returned action function is used as **Action** to the form on submitting which, the original **formAction** is triggered. The returnd value of that function is what we use as **state** in our form.  
 
 By default, **state** is as same as **initialState** however, on form submissions, it holds the updated value which is being returned from **formAction**
 
+The original **action** takes the **initialState** as the first argument and other extra arguments which are passed to **formAction**
