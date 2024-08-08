@@ -93,4 +93,21 @@ The returned action function is used as **Action** to the form on submitting whi
 
 By default, **state** is as same as **initialState** however, on form submissions, it holds the updated value which is being returned from **formAction**
 
-The original **action** takes the **initialState** as the first argument and other extra arguments which are passed to **formAction**
+The original **formAction** takes the **initialState** as the first argument and other extra arguments which are passed to **action**  
+
+#### Sample Snippet
+
+```
+
+const formAction = (initialState) => {
+  ...
+  return 1;
+}
+
+const [state, action] = useActionState(formAction, initialState);
+
+<form action="action" >
+...
+</form>
+
+```
