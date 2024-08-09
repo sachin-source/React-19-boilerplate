@@ -111,3 +111,25 @@ const [state, action] = useActionState(formAction, initialState);
 </form>
 
 ```
+
+### Form Actions
+
+Actions and formActions are the client apis which can be used as props to submit forms, buttons and inputs. These are used to trigger the action events.  
+
+This enables developers to manage forms automatically and speeds up the development.
+
+#### Sample Snippet
+
+```
+
+const formAction = () => {
+  ...
+}
+
+return (
+  <form action="formAction">
+  ...
+  </formAction>
+)
+
+```
