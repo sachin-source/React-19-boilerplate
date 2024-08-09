@@ -9,7 +9,7 @@ Currently the React-19 is in RC ( Release Candidate ) version and this repo is c
 2. [Server Actions](#server-actions)
 3. [UseOptimistic hook](#useOptimistic-hook)
 4. [UseActionState hook](#useactionState-hook)
-5. Form Actions
+5. [Form Actions](#form-actions)
 6. UseFormStatus hook
 7. Use hook
 8. Server components
