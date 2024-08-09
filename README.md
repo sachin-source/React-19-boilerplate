@@ -8,8 +8,8 @@ Currently the React-19 is in RC ( Release Candidate ) version and this repo is c
 1. [Async useTransition hook](#async-usetransition-hook)
 2. [Server Actions](#server-actions)
 3. [UseOptimistic hook](#useOptimistic-hook)
-4. [UseActionState hook](#useactionState-hook)
-5. [Form Actions](#form-actions)
+4. [Form Actions](#form-actions)
+5. [UseActionState hook](#useactionState-hook)
 6. UseFormStatus hook
 7. Use hook
 8. Server components
@@ -85,6 +85,28 @@ const optimistic = useOptimistic(initialState, updateFunction);
 
 ```
 
+### Form Actions
+
+Actions and formActions are the client apis which can be used as props to submit forms, buttons and inputs. These are used to trigger the action events.  
+
+This enables developers to manage forms automatically and speeds up the development.
+
+#### Sample Snippet
+
+```
+
+const formAction = () => {
+  ...
+}
+
+return (
+  <form action="formAction">
+  ...
+  </formAction>
+)
+
+```
+
 ### useActionState hook
 
 This is little tricky hook which takes 2 arguments : a **formAction** and an **initialState**. And returns a **state** as well as an **action** function.  
@@ -109,27 +131,5 @@ const [state, action] = useActionState(formAction, initialState);
 <form action="action" >
 ...
 </form>
-
-```
-
-### Form Actions
-
-Actions and formActions are the client apis which can be used as props to submit forms, buttons and inputs. These are used to trigger the action events.  
-
-This enables developers to manage forms automatically and speeds up the development.
-
-#### Sample Snippet
-
-```
-
-const formAction = () => {
-  ...
-}
-
-return (
-  <form action="formAction">
-  ...
-  </formAction>
-)
 
 ```
