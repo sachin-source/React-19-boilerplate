@@ -10,7 +10,7 @@ Currently the React-19 is in RC ( Release Candidate ) version and this repo is c
 3. [UseOptimistic hook](#useOptimistic-hook)
 4. [Form Actions](#form-actions)
 5. [UseActionState hook](#useactionState-hook)
-6. UseFormStatus hook
+6. [UseFormStatus hook](#useformstatus-hook)
 7. Use hook
 8. Server components
 9. Hydration error reporting improvements
