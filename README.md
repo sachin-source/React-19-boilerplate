@@ -133,3 +133,32 @@ const [state, action] = useActionState(formAction, initialState);
 </form>
 
 ```
+
+### useFormStatus hook
+
+In React, till R18, there was no in-built api or hook available for the developers to check the form submission status and they had to write the code explicitely to check the status of submissions.  
+
+This was although a minor thing to handle, was remain un-noticed and continued. But in R19, the response we can get the status of form submission via **useFormStatus** hook.  
+
+#### Sample Snippet
+
+```
+
+const Button = () => {
+  const { data, pending } = useFormStatus();
+  
+  return (
+    <button> Send { pending && <span>ing...</span> } </button>
+  )
+}
+
+return (
+  <form action="formAction">
+  ...
+  ...
+  <Button />
+  ...
+  </formAction>
+)
+
+```
