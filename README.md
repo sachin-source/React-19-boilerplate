@@ -162,3 +162,20 @@ return (
 )
 
 ```
+
+### use hook
+
+Ract-19 now supports resolving the promise as well as context with a single hook - **use**  
+
+Same and short sytax to read data from promises or from context.
+
+#### Sample Snippet
+
+```
+
+const usersList = use(promise);
+
+const context = use(Context);
+
+```
+
