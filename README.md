@@ -11,7 +11,7 @@ Currently the React-19 is in RC ( Release Candidate ) version and this repo is c
 4. [Form Actions](#form-actions)
 5. [UseActionState hook](#useactionState-hook)
 6. [UseFormStatus hook](#useformstatus-hook)
-7. Use hook
+7. [Use hook](#use-hook)
 8. Server components
 9. Hydration error reporting improvements
 10. Ref as props
