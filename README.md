@@ -187,3 +187,17 @@ React until it's last version used client components which will be loaded at the
 In contrast to this, React Now enables writing RSC - **React Server Components** which are created and generated at the server.
 
 This components are created generated at the server side and passed with the HTML when requested. This way, React helps SEO of the page which helps rendering react components separate from the client.
+
+#### Sample Snippet
+
+```
+
+"use server"
+
+const serverComponent = () => {
+  return (
+    <button>This is server component</button>
+  )
+}
+
+```
