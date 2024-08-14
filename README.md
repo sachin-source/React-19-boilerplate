@@ -179,3 +179,11 @@ const context = use(Context);
 
 ```
 
+
+### Server components
+
+React until it's last version used client components which will be loaded at the client side. These components were loaded by the bundles ( which are internally loaded by js files ) this was keeping the initial HTML page light however, had the heavy bundled JS files.
+
+In contrast to this, React Now enables writing RSC - **React Server Components** which are created and generated at the server.
+
+This components are created generated at the server side and passed with the HTML when requested. This way, React helps SEO of the page which helps rendering react components separate from the client.
